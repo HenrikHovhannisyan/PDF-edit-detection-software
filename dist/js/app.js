@@ -6,7 +6,6 @@ function success() {
     }
 }
 
-
 function chart(id, labels, data, label) {
     new Chart(document.getElementById(id), {
         type: 'line',
