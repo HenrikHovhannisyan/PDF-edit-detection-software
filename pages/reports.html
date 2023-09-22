@@ -78,7 +78,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="./users.html" class="nav-link active">
+                        <a href="./users.html" class="nav-link">
                             <i class="nav-icon fas fa-users"></i>
                             <p>Users</p>
                         </a>
@@ -90,7 +90,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="./reports.html" class="nav-link">
+                        <a href="./reports.html" class="nav-link active">
                             <i class="nav-icon fas fa-signal"></i>
                             <p>Reports</p>
                         </a>
@@ -111,11 +111,11 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0">Users</h1>
+                        <h1 class="m-0">Reports</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#">Users</a></li>
+                            <li class="breadcrumb-item"><a href="#">Reports</a></li>
                             <li class="breadcrumb-item active">Dashboard</li>
                         </ol>
                     </div>
@@ -126,22 +126,19 @@
 
         <section class="content">
             <div class="container-fluid">
-                <a href="./add-user.html" class="btn btn-primary mb-3">
-                    <i class="fa fa-plus" aria-hidden="true"></i>
-                    Add User
-                </a>
                 <div class="row">
                     <div class="col-12 col-md-4">
                         <div class="chart">
                             <div class="chart_header">
-                                <h3>Users</h3>
+                                <h3>Reports</h3>
                                 <p>total users</p>
                             </div>
                             <div class="chart_body">
                                 <span>13</span>
-                                <canvas id="usersChart" style="width:100%;max-width:700px"></canvas>
+                                <canvas id="reportsChart" style="width:100%;max-width:700px"></canvas>
                                 <div class="border-top border-bottom chart_body_box">
-                                    <p>new users last 90 days</p>
+                                    <p>total reports processed in the last 90
+                                        days</p>
                                     <span>3</span>
                                     <p>users run wf last 90 days</p>
                                     <span>8</span>
@@ -158,30 +155,11 @@
                     <section class="col-12 col-md-8">
                         <div class="card">
                             <div class="card-header">
-                                <form action="" method="post">
-                                    <h3>Add User</h3>
-                                    <div class="form-group">
-                                        <label for="name">Name</label>
-                                        <input type="text" class="form-control" id="name"
-                                               aria-describedby="emailHelp" placeholder="Enter a name">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="userName">Username</label>
-                                        <input type="text" class="form-control" id="userName"
-                                               aria-describedby="emailHelp" placeholder="Enter a username">
-                                    </div>
-                                    <button type="submit" class="btn btn-success">Add New User</button>
-                                </form>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-header">
                                 <div class="w-100 h-50">
                                     <div class="card">
                                         <div class="card-header">
                                             <div class="d-flex justify-content-between align-items-center">
-                                                <h3 class="card-title">Users</h3>
+                                                <h3 class="card-title">Reports</h3>
                                             </div>
                                         </div>
                                         <div class="card-body table-responsive p-0">
@@ -189,95 +167,132 @@
                                                 <thead>
                                                 <tr>
                                                     <th>
-                                                        Name
-                                                    </th>
-                                                    <th>
                                                         Username
                                                     </th>
                                                     <th>
-                                                        Actions
+                                                        Date of Job
+                                                    </th>
+                                                    <th>
+                                                        Review
+                                                        Output File
+                                                    </th>
+                                                    <th>
+                                                        Follow up
+                                                        with client?
                                                     </th>
                                                 </tr>
                                                 </thead>
                                                 <tbody>
                                                 <tr>
                                                     <td>
-                                                            <span>
-                                                              Claudio Barrera
-                                                            </span>
+                                                        <span>
+                                                          Claudio Barrera
+                                                        </span>
                                                     </td>
                                                     <td>
-                                                            <span>
-                                                              edd_n_flow
-                                                            </span>
+                                                        <span>
+                                                          08 Jan, 2023
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span>
+                                                          XYZ Bank
+                                                            Statement_OUTPUT
+                                                        </span>
                                                     </td>
                                                     <td class="project-actions">
-                                                        <a class="btn btn-info btn-sm" href="#">
-                                                            <i class="fas fa-pencil-alt"></i>
-                                                        </a>
-                                                        <a class="btn btn-danger btn-sm" href="#">
-                                                            <i class="fas fa-trash"></i>
-                                                        </a>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="checkbox" id="yes" value="yes">
+                                                            <label class="form-check-label" for="yes">Yes</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="checkbox" id="no" value="no">
+                                                            <label class="form-check-label" for="no">No</label>
+                                                        </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                            <span>
-                                                              Shane O
-                                                            </span>
+                                                        <span>
+                                                          Claudio Barrera
+                                                        </span>
                                                     </td>
                                                     <td>
-                                                            <span>
-                                                              too-tired
-                                                            </span>
+                                                        <span>
+                                                          08 Jan, 2023
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span>
+                                                          XYZ Bank
+                                                            Statement_OUTPUT
+                                                        </span>
                                                     </td>
                                                     <td class="project-actions">
-                                                        <a class="btn btn-info btn-sm" href="#">
-                                                            <i class="fas fa-pencil-alt"></i>
-                                                        </a>
-                                                        <a class="btn btn-danger btn-sm" href="#">
-                                                            <i class="fas fa-trash"></i>
-                                                        </a>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="checkbox" id="yes" value="yes">
+                                                            <label class="form-check-label" for="yes">Yes</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="checkbox" id="no" value="no">
+                                                            <label class="form-check-label" for="no">No</label>
+                                                        </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                            <span>
-                                                              Shawna
-                                                            </span>
+                                                        <span>
+                                                          Claudio Barrera
+                                                        </span>
                                                     </td>
                                                     <td>
-                                                            <span>
-                                                              rootsrevival
-                                                            </span>
+                                                        <span>
+                                                          08 Jan, 2023
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span>
+                                                          XYZ Bank
+                                                            Statement_OUTPUT
+                                                        </span>
                                                     </td>
                                                     <td class="project-actions">
-                                                        <a class="btn btn-info btn-sm" href="#">
-                                                            <i class="fas fa-pencil-alt"></i>
-                                                        </a>
-                                                        <a class="btn btn-danger btn-sm" href="#">
-                                                            <i class="fas fa-trash"></i>
-                                                        </a>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="checkbox" id="yes" value="yes">
+                                                            <label class="form-check-label" for="yes">Yes</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="checkbox" id="no" value="no">
+                                                            <label class="form-check-label" for="no">No</label>
+                                                        </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                            <span>
-                                                              Sheena, W.P.
-                                                            </span>
+                                                        <span>
+                                                          Claudio Barrera
+                                                        </span>
                                                     </td>
                                                     <td>
-                                                            <span>
-                                                              sheenawp312
-                                                            </span>
+                                                        <span>
+                                                          08 Jan, 2023
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span>
+                                                          XYZ Bank
+                                                            Statement_OUTPUT
+                                                        </span>
                                                     </td>
                                                     <td class="project-actions">
-                                                        <a class="btn btn-info btn-sm" href="#">
-                                                            <i class="fas fa-pencil-alt"></i>
-                                                        </a>
-                                                        <a class="btn btn-danger btn-sm" href="#">
-                                                            <i class="fas fa-trash"></i>
-                                                        </a>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="checkbox" id="yes" value="yes">
+                                                            <label class="form-check-label" for="yes">Yes</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="checkbox" id="no" value="no">
+                                                            <label class="form-check-label" for="no">No</label>
+                                                        </div>
                                                     </td>
                                                 </tr>
                                                 </tbody>
@@ -309,7 +324,7 @@
 <script src="./../dist/js/adminlte.js"></script>
 <script src="./../dist/js/app.js"></script>
 <script>
-    chart("usersChart", [1, 2, 3, 4, 5, 6, 7], [5, 5, 5, 5, 5, 5, 5], "Users");
+    chart("reportsChart", [1, 2, 3, 4, 5, 6, 7], [7, 7, 7, 7, 7, 7, 7], "Reports");
 </script>
 </body>
 </html>

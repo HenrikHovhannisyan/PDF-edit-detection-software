@@ -28,7 +28,3 @@ function chart(id, labels, data, label) {
     });
 }
 
-
-chart("jobsChart", [1, 2, 3, 4, 5, 6, 7], [10, 47, 24, 2, 5, 16, 9], "Jobs");
-chart("usersChart", [1, 2, 3, 4, 5, 6, 7], [5, 5, 5, 5, 5, 5, 5], "Users");
-chart("reportsChart", [1, 2, 3, 4, 5, 6, 7], [7, 7, 7, 7, 7, 7, 7], "Reports");

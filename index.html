@@ -90,6 +90,12 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a href="./pages/reports.html" class="nav-link">
+                            <i class="nav-icon fas fa-signal"></i>
+                            <p>Reports</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-cogs"></i>
                             <p>Settings</p>
@@ -212,5 +218,10 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <script src="./dist/js/adminlte.js"></script>
 <script src="./dist/js/app.js"></script>
+<script>
+    chart("jobsChart", [1, 2, 3, 4, 5, 6, 7], [10, 47, 24, 2, 5, 16, 9], "Jobs");
+    chart("usersChart", [1, 2, 3, 4, 5, 6, 7], [5, 5, 5, 5, 5, 5, 5], "Users");
+    chart("reportsChart", [1, 2, 3, 4, 5, 6, 7], [7, 7, 7, 7, 7, 7, 7], "Reports");
+</script>
 </body>
 </html>
